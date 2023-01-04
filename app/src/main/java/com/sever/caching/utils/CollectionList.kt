@@ -9,15 +9,16 @@ object CollectionList {
     fun getList(): List<CollectionListItemInterface> {
         return mutableListOf<CollectionListItemInterface>().apply {
             add(CollectionHeaderEntity("Загружены", 16))
-
-            add(CollectionEventEntity("Alpha", 3, R.drawable.alpha))
-            add(CollectionEventEntity("Firewatch", 4, R.drawable.firewatch))
-
+            repeat(10) {
+                add(CollectionEventEntity("Alpha", 3, R.drawable.alpha))
+                add(CollectionEventEntity("Firewatch", 4, R.drawable.firewatch))
+            }
             add(CollectionHeaderEntity("Не загружены", 16))
-
-            add(CollectionEventEntity("Highway", 3, R.drawable.highway))
-            add(CollectionEventEntity("Alpha", 3, R.drawable.alpha))
-            add(CollectionEventEntity("Firewatch", 4, R.drawable.firewatch))
+            repeat(30) {
+                add(CollectionEventEntity("Highway", 3, R.drawable.highway))
+                add(CollectionEventEntity("Alpha", 3, R.drawable.alpha))
+                add(CollectionEventEntity("Firewatch", 4, R.drawable.firewatch))
+            }
         }
     }
 }
